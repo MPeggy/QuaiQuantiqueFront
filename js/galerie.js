@@ -1,13 +1,13 @@
 const galerieImage = document.getElementById("allImages");
 
-//Récupérer les infos des images
+//Rajout des images directement avec methode manuelle car peu d'images. Sinon priviliégier tableau et boucle en rajoutant un const images pour une gestion plus simple
 
-let titre = '<img src=x onerror="window.location.replace(\'https://google.com\')"/>';
-let imgSource = "../images/Chef nappe plat de sauce.jpg";
-
-let monImage = getImage(titre, imgSource);
-
-galerieImage.innerHTML = monImage
+galerieImage.innerHTML += getImage("Oeuf parfait gourmand","../images/Assiette avec oeuf et avocat.jpg");
+galerieImage.innerHTML += getImage("Délices du jardin","../images/Assiette de salade.jpg");
+galerieImage.innerHTML += getImage("L'excellence du Chef","../images/Chef nappe plat de sauce.jpg");
+galerieImage.innerHTML += getImage("Velouté de Quinoa aux Herbes","../images/Soupe.jpg");
+galerieImage.innerHTML += getImage("Côtelette d’Agneau Rôtie","../images/Cote d agneau.jpg");
+galerieImage.innerHTML += getImage("Duo Terre et Mer","../images/Crevettes.jpg");
 
 function getImage(titre, urlImage){
     titre = sanitizeHtml(titre);
