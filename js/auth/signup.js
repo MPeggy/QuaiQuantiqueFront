@@ -120,7 +120,7 @@ function InscrireUtilisateur(){
         }
     })
     .then(() => {
-        alert("Félicitations "+dataForm.get("Prenom")+", vous êtes inscrit(e), vous pouvez vous connecter.");
+        alert(`Félicitations,vous êtes inscrit(e), vous pouvez vous connecter.`);
         document.location.href="/signin";
     })
     .catch((error) => console.error(error));

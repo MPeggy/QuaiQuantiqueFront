@@ -102,12 +102,6 @@ function sanitizeHtml(text){
     return tempHtml.innerHTML;
 }
 
-function sanitizeHtml(input) {
-    const div = document.createElement("div");
-    div.textContent = input;
-    return div.innerHTML;
-}
-
 function getInfosUser(){    
     let myHeaders = new Headers();
     myHeaders.append("X-AUTH-TOKEN", getToken());
