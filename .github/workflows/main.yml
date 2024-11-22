@@ -21,7 +21,7 @@ jobs:
       with:
         server: ftp-restauquaiantique.alwaysdata.net
         username: quaiantiquerestaurant
-        password : ${{p@Cl17dossRNCP}}
+        password : ${{ p@Cl17dossRNCP }}
         exclude: |
           **/.git*
           **/.git*/**
