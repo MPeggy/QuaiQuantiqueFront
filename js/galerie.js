@@ -4,9 +4,9 @@ const galerieImage = document.getElementById("allImages");
 
 galerieImage.innerHTML += getImage("Oeuf parfait gourmand", "../images/Assiette_oeuf_avocat.jpg");
 galerieImage.innerHTML += getImage("Délices du jardin","../images/Assiette_salade.jpg");
-galerieImage.innerHTML += getImage("L'excellence du Chef","../images/Chef_nappe_plat.jpg");
+galerieImage.innerHTML += getImage("L'excellence du Chef","../images/Chef_nappe _plat.jpg");
 galerieImage.innerHTML += getImage("Velouté de Quinoa aux Herbes","../images/Soupe.jpg");
-galerieImage.innerHTML += getImage("Côtelette d’Agneau Rôtie","../images/Cote_agneau");
+galerieImage.innerHTML += getImage("Côtelette d’Agneau Rôtie","../images/Cote_ agneau.jpg");
 galerieImage.innerHTML += getImage("Duo Terre et Mer","../images/Crevettes.jpg");
 
 function getImage(titre, urlImage){
