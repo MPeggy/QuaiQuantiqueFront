@@ -22,6 +22,7 @@ jobs:
         server: ftp-restauquaiantique.alwaysdata.net
         username: quaiantiquerestaurant
         password: ${{ secrets.ftp_password }}
+        protocol : ftps 
         exclude: |
           **/.git*
           **/.git*/**
