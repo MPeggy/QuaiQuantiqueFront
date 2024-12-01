@@ -59,8 +59,8 @@ function getMenu(titre, prix, description, contenu) {
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                     <h2>${titre} - ${prix}</h2>
                     <div>
-                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#editMenuModal" data-title="${titre}" data-price="${prix}" data-description="${description}">Modifier<i class="bi bi-pencil-square"></i></button>
-                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteMenuModal" data-title="${titre}">Supprimer<i class="bi bi-trash"></i></button>
+                        <button class="btn btn-secondary btn-sm"  data-show="admin" data-bs-toggle="modal" data-bs-target="#editMenuModal" data-title="${titre}" data-price="${prix}" data-description="${description}">Modifier<i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-danger btn-sm" data-show="admin" data-bs-toggle="modal" data-bs-target="#deleteMenuModal" data-title="${titre}">Supprimer<i class="bi bi-trash"></i></button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -105,8 +105,8 @@ function getAlaCarte(titre, contenu) {
                 <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
                 <h2>${titre}</h2>
                     <div>
-                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#editMenuModal" data-title="${titre}">Modifier<i class="bi bi-pencil-square"></i></button>
-                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteMenuModal" data-title="${titre}">Supprimer<i class="bi bi-trash"></i></button>
+                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-show="admin data-bs-target="#editMenuModal" data-title="${titre}">Modifier<i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-show="admin data-bs-target="#deleteMenuModal" data-title="${titre}">Supprimer<i class="bi bi-trash"></i></button>
                     </div>
                 </div>
                 <div class="card-body">

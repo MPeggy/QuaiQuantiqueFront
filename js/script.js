@@ -102,7 +102,8 @@ function sanitizeHtml(text){
     return tempHtml.innerHTML;
 }
 
-function getInfosUser(){    
+function getInfosUser(){  
+    console.log("Recup des infos utilisateur")  
     let myHeaders = new Headers();
     myHeaders.append("X-AUTH-TOKEN", getToken());
 
@@ -122,6 +123,7 @@ function getInfosUser(){
         }
     })
     .then(result => {
+        console.log(result);
         return result;
     })
     .catch(error =>{

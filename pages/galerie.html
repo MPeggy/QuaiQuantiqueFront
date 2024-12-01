@@ -6,7 +6,7 @@
 
 <div class="container" >  
     <div class="text-center pt-4">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
+        <button type="button" class="btn btn-primary" data-show="admin" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>  
     <div class="row row-cols-2 row-cols-lg-3" id="allImages">  
     </div>
@@ -17,7 +17,7 @@
 </div>
 
 <!-- Modal edition -->
-<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true" >
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true" data-show="admin">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
