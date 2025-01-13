@@ -6,23 +6,23 @@ const signinForm = document.getElementById("signinForm");
 btnSignin.addEventListener("click", checkCredentials);
 
 function checkCredentials(){
-    const dataForm = new FormData(signinForm);
-    const myHeaders = new Headers();
+    let dataForm = new FormData(signinForm);
+    let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    const raw = JSON.stringify({
+    let raw = JSON.stringify({
         "username": dataForm.get("Email"),
         "password": dataForm.get("Password")
     });
 
-    const requestOptions = {
+    let requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
     };
 
-    fetch(`${apiUrl}login`, requestOptions)
+    fetch(apiUrl+"login", requestOptions)
     .then((response) => {
         if (response.ok){
             return response.json();
@@ -43,5 +43,5 @@ function checkCredentials(){
 
         window.location.replace("/");
     })
-    .catch((error) => console.error(error));
+    .catch(error => console.log('error', error));
 }

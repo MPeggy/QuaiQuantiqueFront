@@ -11987,25 +11987,25 @@ p {
   font-size: 18px;
 }
 
-.hero-scene {
+.hero-scene-content {
   position: relative;
   margin-bottom: 15px;
 }
-.hero-scene::before {
+.hero-scene-content::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/Plats_libanais.jpg);
+  background-image: url(/images/Plats_libanais.jpg);
   background-size: cover;
   filter: brightness(0.3);
 }
-.hero-scene * {
+.hero-scene-content * {
   position: relative;
 }
-.hero-scene .hero-scene-content {
+.hero-scene-content .hero-scene {
   height: 300px;
   display: flex;
   flex-direction: column;

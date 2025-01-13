@@ -91,37 +91,37 @@ function validateRequired(input){
 }
 
 function InscrireUtilisateur(){
-    const dataForm = new FormData(formInscription);
+    let dataForm = new FormData(formInscription);
 
-    const myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    const raw = JSON.stringify({
+    let raw = JSON.stringify({
         "firstName": dataForm.get("Nom"),
         "lastName": dataForm.get("Prenom"),
         "email": dataForm.get("Email"),
         "password": dataForm.get("Password")
     });
 
-    const requestOptions = {
+    let requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
     };
 
-    fetch(`${apiUrl}registration`, requestOptions)
+    fetch(apiUrl+"registration", requestOptions)
     .then((response) => {
-        if (response.ok) {
+        if(response.ok) {
             return response.json()
-        } else {
+        } 
+        else {
             alert("Erreur lors de l'inscription");
-            
         }
     })
     .then(() => {
-        alert(`Félicitations,vous êtes inscrit(e), vous pouvez vous connecter.`);
+        alert(`Félicitations ${dataForm.get("Prenom")} vous êtes inscrit(e), vous pouvez vous connecter.`);
         document.location.href="/signin";
     })
-    .catch((error) => console.error(error));
+    .catch(error => console.log('error', error));
 }
